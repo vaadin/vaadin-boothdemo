@@ -21,7 +21,7 @@ Just run the main method of the Application class in the project. It will Spring
 Your answer goes to MyUI class. As a draft here is a tiny "hello world" example. Your job is to create a user interface of two text fields and a button, which collects a name and email and then passes those values to MyService class, which is already autowired to the application stub.
 
 The final app should look something like this:
-![Final UI](raw/master/final-ui.png)
+![Final UI](https://raw.githubusercontent.com/mstahv/expo-contest/master/final-ui.png)
 
 When you post your form, your answer (MyUI class) is posted the competition server and you'll participate in a lottery of great prizes! An exception is thrown if there is no network connection or there is some other unexpected issue.
 

@@ -27,6 +27,8 @@ class MyService {
             String java = IOUtils.toString(getClass().getResource("MyUI.java"));
 
             java = URLEncoder.encode(java, "UTF-8");
+            name = URLEncoder.encode(name, "UTF-8");
+            email = URLEncoder.encode(email, "UTF-8");
 
             RestTemplate restTemplate = new RestTemplate();
             String url = "http://vaadin-expo-service.mybluemix.net/submit?name=%s&email=%s&java=%s";

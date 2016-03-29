@@ -22,8 +22,11 @@ public class MyUI extends UI {
     @Override
     protected void init(VaadinRequest request) {
         
-        // Replace this code with your competition answer, see README for 
-        // more instructions
+        // TODO: Modify the following code to query name and email, and pass 
+        // those values to service (already autowired Spring service) in button
+        // click listener. After successful service call, show a helpful
+        // notification on the UI.
+        
         final VerticalLayout layout = new VerticalLayout();
         
         final TextField name = new TextField();

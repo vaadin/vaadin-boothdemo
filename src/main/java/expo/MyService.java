@@ -31,7 +31,7 @@ class MyService {
             email = URLEncoder.encode(email, "UTF-8");
 
             RestTemplate restTemplate = new RestTemplate();
-            String url = "http://vaadin-expo-service.mybluemix.net/submit?name=%s&email=%s&java=%s";
+            String url = "http://vaad.in/submit?name=%s&email=%s&java=%s";
             url = String.format(url, name, email, java);
 
             String response = restTemplate.getForObject(url, String.class);

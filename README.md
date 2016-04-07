@@ -8,7 +8,7 @@ Download [the starter project as zip file](https://github.com/mstahv/expo-contes
 
 ## Import the Maven project in your IDE
 
-If you are using IntelliJ or NetBeans, just open the project from the downloaded project. In Eclipse, use "Import->Import e"
+If you are using IntelliJ or NetBeans, just open the project from the downloaded project. In Eclipse, use "Import -> Existing Maven Projects"
 
 If you are new to Maven, you could look into [a Maven tutorial](https://vaadin.com/blog/-/blogs/the-maven-essentials-for-the-impatient-developer).
 

@@ -4,7 +4,7 @@ This is a starting point for a development contest. You'll need a Java 8 install
 
 ## Download the starter project
 
-Download [the starter project as zip file](https://github.com/mstahv/expo-starter/archive/master.zip) and extract the project to your computer.
+Download [the starter project as zip file](https://github.com/mstahv/expo-contest/archive/master.zip) and extract the project to your computer.
 
 ## Import the Maven project in your IDE
 

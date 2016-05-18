@@ -1,15 +1,13 @@
 package expo;
 
+import com.vaadin.server.Page;
+import com.vaadin.ui.Notification;
 import java.io.IOException;
 import java.net.URLEncoder;
 import org.apache.commons.io.IOUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-/**
- *
- * @author Matti Tahvonen
- */
 @Service
 class MyService {
 
@@ -37,10 +35,15 @@ class MyService {
             String response = restTemplate.getForObject(url, String.class);
 
             if (!"Success!".equals(response)) {
-                throw new RuntimeException("Saving entity failed:" + response);
+                Notification.show("Saving entity failed: " + response, Notification.Type.ERROR_MESSAGE);
+                return;
             }
-        } catch (IOException ex) {
-            throw new RuntimeException(ex);
+            Notification notification = new Notification("Congrats!", "You are now signed up for the lottery!");
+            notification.setDelayMsec(5000);
+            notification.show(Page.getCurrent());
+        } catch (Exception ex) {
+                Notification.show("Saving entity failed: " + ex.getMessage().substring(0, 28) + "...", Notification.Type.ERROR_MESSAGE);
+                ex.printStackTrace();
         }
     }
 

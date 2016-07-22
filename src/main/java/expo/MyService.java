@@ -1,12 +1,16 @@
 package expo;
 
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestClientException;
+import org.springframework.web.client.RestTemplate;
+
 import com.vaadin.server.Page;
 import com.vaadin.ui.Notification;
-import java.io.IOException;
-import java.net.URLEncoder;
-import org.apache.commons.io.IOUtils;
-import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
+
+import expo.domain.EmailSubscription;
 
 @Service
 class MyService {
@@ -19,28 +23,27 @@ class MyService {
      * @param email the email of the participant
      * @param name the name of the participant
      */
-    public void signUp(String email, String name) {
+    public void signUp(EmailSubscription s) {
 
         try {
-            String java = IOUtils.toString(getClass().getResource("MyUI.java"));
-
-            java = URLEncoder.encode(java, "UTF-8");
-            name = URLEncoder.encode(name, "UTF-8");
-            email = URLEncoder.encode(email, "UTF-8");
-
+        	
             RestTemplate restTemplate = new RestTemplate();
-            String url = "http://vaad.in/submit?name=%s&email=%s&java=%s";
-            url = String.format(url, name, email, java);
+            HttpHeaders headers = new HttpHeaders();
+            headers.setContentType(MediaType.APPLICATION_JSON);
 
-            String response = restTemplate.getForObject(url, String.class);
-
-            if (!"Success!".equals(response)) {
-                Notification.show("Saving entity failed: " + response, Notification.Type.ERROR_MESSAGE);
+            HttpEntity<EmailSubscription> entity = new HttpEntity<EmailSubscription>(s,headers);
+            String url = "http://vaad.in/submitj1";
+            url = "http://localhost:8080/submitj1";
+            try {
+                restTemplate.put(url, entity);
+                Notification notification = new Notification("Congrats!", "You are now signed up for the lottery!");
+                notification.setDelayMsec(5000);
+                notification.show(Page.getCurrent());
+            } catch (RestClientException e) {
+                Notification.show("Saving entity failed: " + e.getMessage(), Notification.Type.ERROR_MESSAGE);
                 return;
             }
-            Notification notification = new Notification("Congrats!", "You are now signed up for the lottery!");
-            notification.setDelayMsec(5000);
-            notification.show(Page.getCurrent());
+
         } catch (Exception ex) {
                 Notification.show("Saving entity failed: " + ex.getMessage().substring(0, 28) + "...", Notification.Type.ERROR_MESSAGE);
                 ex.printStackTrace();

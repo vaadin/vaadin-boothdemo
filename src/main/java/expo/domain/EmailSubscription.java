@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by mstahv
+ * A POJO for handling email and name 
  */
 public class EmailSubscription {
 

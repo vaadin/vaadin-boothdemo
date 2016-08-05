@@ -3,6 +3,7 @@ package expo;
 import com.vaadin.annotations.Theme;
 import com.vaadin.data.fieldgroup.BeanFieldGroup;
 import com.vaadin.server.VaadinRequest;
+import com.vaadin.shared.ui.label.ContentMode;
 import com.vaadin.spring.annotation.SpringUI;
 import com.vaadin.ui.*;
 import com.vaadin.ui.Button.ClickListener;
@@ -15,54 +16,44 @@ import org.springframework.beans.factory.annotation.Autowired;
 @SpringUI
 public class MyUI extends UI {
 
-    // This Spring service will be your gateway to sign up for free spam
+    // This Spring service is your backend. It has been autowired thanks to springframework
     @Autowired
     MyService service;
 
     final TextField name = new TextField("Name");
     final TextField email = new TextField("Email");
-    final OptionGroup interestTypes = new OptionGroup("Subscriptions");
-
+    final Label text = new Label("Click on the button below to get an email with <b>video tutorials</b> and more to help you get started with the <b>open source Vaadin Framework</b>.",ContentMode.HTML);
 
     @Override
     protected void init(VaadinRequest request) {
-
-        // TODO: Modify the following code to query name and email, and pass 
-        // those values to service (already autowired Spring service) in button
-        // click listener. After successful service call, show a helpful
-        // notification on the UI.
         
-        final VerticalLayout layout = new VerticalLayout(name, email, interestTypes);
-
+    	// Add the two textfields created above to a layout and make 
+    	// that the main layout of the view
+        final VerticalLayout layout = new VerticalLayout(name, email, text);
+        setContent(layout);
+        
+        // Bind a POJO for name and email to this view 
         EmailSubscription s = new EmailSubscription();
-
-        interestTypes.setMultiSelect(true);
-        interestTypes.addItems(InterestType.values());
-        
         BeanFieldGroup.bindFieldsUnbuffered(s, this);
         
-        Button button = new Button("Save");
+        // Create and add a button to the screen 
+        Button button = new Button("Send email");
+        layout.addComponents(button);
+        
+        /* TODO 
+         * Create a ClickListener for the button and call the service (Autowired above)
+         * whenever somebody clicks on the button. 
+         */
         ClickListener listener = e -> {
-            Notification.show("Thanks " + name.getValue() + ", it works!" + s.toString());
+            Notification.show("Thanks " + name.getValue() + ", now check your inbox!");
             service.signUp(s);
         };
+		button.addClickListener(listener);
         
-		button.addClickListener( listener);
-        
-        layout.addComponents(button);
+		// Some visual styling for the layout for nicer look 'n' feel. 
+		// Alternatively doable in CSS/Sass
         layout.setMargin(true);
         layout.setSpacing(true);
-        
-        SubscriptionEditor editor = new SubscriptionEditor();
-        editor.interestTypes.setMultiSelect(true);
-        editor.interestTypes.removeAllItems();
-        editor.interestTypes.addItems(InterestType.values());
-        editor.save.addClickListener(listener);
-        BeanFieldGroup.bindFieldsUnbuffered(s, editor);
-        layout.addComponents(editor);
-        
-        setContent(layout);
-
     }
 
 }

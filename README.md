@@ -50,6 +50,6 @@ Just run the main method of the Application class in the project. It will Spring
 
 * "But you can also try out the visual designer!"
 
-(git
+(git checkout designer)
 
 

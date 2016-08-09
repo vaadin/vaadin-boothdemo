@@ -19,9 +19,11 @@ Just run the main method of the Application class in the project. It will Spring
 ## The booth pitch
 
 >Hi, do have you been using Vaadin before or do you wanna know what it is? 
+
 (You only leave room for a positive answer -> good first start)
 
 > Excellent, so what do you do yourself by the way? Are you a developer or an architect or ...?
+
 (Be interested in them but don't push!)
 
 > So Vaadin is a Java UI Framework. It's completely open source and used by 150 000 developers around the world. Maybe we could try it together, just take the keyboard and you can see for yourself.
@@ -29,6 +31,7 @@ Just run the main method of the Application class in the project. It will Spring
 (Open up http://demo.vaadin.com/dashboard/)
 
 > This is what you can do with Vaadin 
+
 (click around in dashboard) 
 
 > Vaadin consists of hundreds of widgets that have a clear Java API from a table to graphs menus. The beauty of it is that the code is running on the server but the user interacts with an HTML5 app. And the communication between the browser and the server is all automated.

@@ -18,7 +18,7 @@ Just run the main method of the Application class in the project. It will Spring
 
 ## The booth pitch
 
-* "Hi, do have you been using Vaadin before or do you wanna know what it is?" (You only leave room for a positive answer -> good first start)
+[quote]Hi, do have you been using Vaadin before or do you wanna know what it is?[quote] (You only leave room for a positive answer -> good first start)
 
 * "Excellent, so what do you do yourself by the way? Are you a developer or an architect or ...?" (Be interested in them but don't push!)
 

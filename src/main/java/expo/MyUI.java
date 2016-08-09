@@ -43,12 +43,13 @@ public class MyUI extends UI {
         /* TODO 
          * Create a ClickListener for the button and call the service (Autowired above)
          * whenever somebody clicks on the button. 
-         */
-        ClickListener listener = e -> {
-            Notification.show("Thanks " + name.getValue() + ", now check your inbox!");
-            service.signUp(s);
-        };
-		button.addClickListener(listener);
+         *
+         * ClickListener listener = e -> {
+         *    Notification.show("Thanks " + name.getValue() + ", now check your inbox!");
+         *    service.signUp(s);
+         *  };
+		 * button.addClickListener(listener);
+		 */
         
 		// Some visual styling for the layout for nicer look 'n' feel. 
 		// Alternatively doable in CSS/Sass

@@ -45,6 +45,7 @@ Just run the main method of the Application class in the project. It will Spring
 > As you can see there are two packages, one for the backend and another for the front-end. We're running this on Spring-boot but you can use and application server like jetty, tomcat, websphere or wildfly.
 
 > Please try it yourself and I'll teach you in 30 seconds.
+
 (Run as Java Application and open the URL http://localhost:8888/ in Chrome and Give the keyboard to the customer)
 
 > Open up MyUI.java and look at Chrome. As you can see it's fairly simple. We have two TextFields and a button and then we have a Spring autowired backend-service.

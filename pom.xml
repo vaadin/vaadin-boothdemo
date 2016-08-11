@@ -4,8 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.vaadin</groupId>
-	<artifactId>vaadin-expo-something</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>javaone-pitch</artifactId>
+	<version>1.0.0</version>
 
 	<description>Vaadin EXPO-booth pitch</description>
 

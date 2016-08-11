@@ -6,7 +6,7 @@ This is a starting point for showing how Vaadin works. You'll need a Java 8 inst
 
 Clone this repository for yourself 
 ```
-git clone git@gitlab.vaadin.com:fredu/vaadin-expo-something.git
+git clone git@gitlab.vaadin.com:fredu/javaone-pitch.git
 ```
 
 Import the Maven project in your IDE: 

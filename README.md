@@ -4,15 +4,14 @@ This is a starting point for showing how Vaadin works. You'll need a Java 8 inst
 
 ## Before JavaOne
 
-Clone this repository for yourself
-
+Clone this repository for yourself 
+```
 git clone git@gitlab.vaadin.com:fredu/vaadin-expo-something.git
+```
 
-### Import the Maven project in your IDE
+Import the Maven project in your IDE: 
 
-If you are using IntelliJ or NetBeans, just open the project from the downloaded project. In Eclipse, use "Import -> Existing Maven Projects"
-
-If you are new to Maven, you could look into [the Maven tutorial](https://vaadin.com/blog/-/blogs/the-maven-essentials-for-the-impatient-developer).
+If you are using IntelliJ or NetBeans, just open the project from the downloaded project. In Eclipse, use "Import -> Existing Maven Projects". If you are new to Maven, you could look into [the Maven tutorial](https://vaadin.com/blog/-/blogs/the-maven-essentials-for-the-impatient-developer).
 
 
 ## The Booth Pitch

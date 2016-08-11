@@ -36,19 +36,20 @@ public class MyUI extends UI {
         EmailSubscription s = new EmailSubscription();
         BeanFieldGroup.bindFieldsUnbuffered(s, this);
         
-        // Create and add a button to the screen 
+        // Create and add a button to the screen (http://demo.vaadin.com/sampler/#ui/interaction/button)
         Button button = new Button("Send email");
         layout.addComponents(button);
         
         /* TODO 
          * Create a ClickListener for the button and call the service (Autowired above)
          * whenever somebody clicks on the button. 
-         *
-         * ClickListener listener = e -> {
+         * 
+         * ANSWER:
+         * 
+		 * button.addClickListener(e -> {
          *    Notification.show("Thanks " + name.getValue() + ", now check your inbox!");
          *    service.signUp(s);
-         *  };
-		 * button.addClickListener(listener);
+         *  });
 		 */
         
 		// Some visual styling for the layout for nicer look 'n' feel. 

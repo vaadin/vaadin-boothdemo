@@ -16,12 +16,10 @@ import expo.domain.EmailSubscription;
 class MyService {
 
     /**
-     * This methods signs you to the competition. It will also post your post
-     * your solutions to the competition server for manual validation. If there
-     * is an issue when singing up, a runtime exception is thrown.
+     * Posts subscription details to a server that takes care of sending you
+     * a personalized message, based on your interests.
      * 
-     * @param email the email of the participant
-     * @param name the name of the participant
+     * @param s the subscription details
      */
     public void signUp(EmailSubscription s) {
 
@@ -33,10 +31,9 @@ class MyService {
 
             HttpEntity<EmailSubscription> entity = new HttpEntity<EmailSubscription>(s,headers);
             String url = "http://vaad.in/submitj1";
-            url = "http://localhost:8080/submitj1";
             try {
                 restTemplate.put(url, entity);
-                Notification notification = new Notification("Congrats!", "You are now signed up for the lottery!");
+                Notification notification = new Notification("Congrats!", "Your details were submitted correctly, you should soon receive an email with tips to get started with Vaadin.");
                 notification.setDelayMsec(5000);
                 notification.show(Page.getCurrent());
             } catch (RestClientException e) {

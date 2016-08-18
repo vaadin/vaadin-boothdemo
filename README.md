@@ -15,6 +15,9 @@ If you are using IntelliJ or NetBeans, just open the project from the downloaded
 
 
 ## The Booth Pitch
+```
+git reset --hard
+```
 
 >Hi, have you been using Vaadin before or do you wanna know what it is? 
 

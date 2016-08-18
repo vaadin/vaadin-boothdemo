@@ -64,6 +64,11 @@ Open up Chrome with the app
 
 > That was easy! If you type in your email address you'll get links to a few video tutorials to get started with Vaadin.
 
+> All of this is open source and free to use in any way that you want! 
+
+(Wait for them to ask how we make money, if no question then continue):
+
+> We make our money by building even more awesome tools such as a visual Designer for Vaadin Framework and consulting and support.
 > The fun part however starts when you start designing your UIs. Do you want to see how to simply drag and drop your UI in place even faster?
 
 See the Designer project!

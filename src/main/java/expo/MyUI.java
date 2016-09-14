@@ -39,9 +39,7 @@ public class MyUI extends UI {
         // Create and add a button to the screen (http://demo.vaadin.com/sampler/#ui/interaction/button)
         Button button = new Button("Send email");
         layout.addComponents(button);
-        button.addClickListener(click -> service.signUp(subscription));
-
-        // TODO: Call service.signUp(s) when button is clicked 
+        // TODO: Call service.signUp(subscription) when button is clicked 
 
         // Visual styling for the layout for nicer look 'n' feel. 
         layout.setMargin(true);

@@ -1,7 +1,7 @@
 package expo;
 
 import com.vaadin.annotations.Theme;
-import com.vaadin.data.fieldgroup.BeanFieldGroup;
+import com.vaadin.data.BeanBinder;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.shared.ui.label.ContentMode;
 import com.vaadin.spring.annotation.SpringUI;
@@ -30,12 +30,16 @@ public class MyUI extends UI {
         setContent(layout);
 
         // Bind a POJO for name and email to this view 
-        EmailSubscription s = new EmailSubscription();
-        BeanFieldGroup.bindFieldsUnbuffered(s, this);
+        EmailSubscription subscription = new EmailSubscription();
+        BeanBinder<EmailSubscription> binder = new BeanBinder<>(EmailSubscription.class);
+        binder.bind(name, "name");
+        binder.bind(email, "email");
+        binder.load(subscription);
 
         // Create and add a button to the screen (http://demo.vaadin.com/sampler/#ui/interaction/button)
         Button button = new Button("Send email");
         layout.addComponents(button);
+        button.addClickListener(click -> service.signUp(subscription));
 
         // TODO: Call service.signUp(s) when button is clicked 
 

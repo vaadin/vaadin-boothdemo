@@ -35,17 +35,17 @@ Open up http://demo.vaadin.com/dashboard/
 
 Click around in dashboard, show graphs, tables etc
 
-> Vaadin consists of hundreds of widgets that have a clear Java API from a table to graphs and menus. The beauty of it is that the code is running on the server but the user interacts with an HTML5 app. And the communication between the browser and the server is all automated.
+> Vaadin consists of hundreds of widgets that have a clear Java API from a table to graphs and menus. The beauty of it is that the user interacts with an HTML5 app and the communication is automated. 
 
 That's the end of the 1 minute pitch. Now switch over to them – look at them and listen.
 
 > What IDE are you using yourself? Ok, excellent – let's see it in action.
 
-Open up the IDE that they were using; IDEA, Eclipse or Netbeans
+Open up the IDE that they were using; IDEA or Eclipse
 
 run **git clean** (get you to the starting point) and open the packages in the IDE to show the files in the project
 
-> As you can see there are two packages, one for the back-end and another for the front-end. We're running this on Spring-boot but you can use any application server like jetty, tomcat, websphere or wildfly.
+> As you can see there is a service and a UI. We're running this on Spring-boot (and thus have an Application class) but you can use any application server like jetty, tomcat, websphere or wildfly.
 
 > Maybe you could try it. Just start this app to see what it looks like.
 

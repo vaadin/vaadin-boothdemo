@@ -26,8 +26,6 @@ public class MyUI extends UI {
     @Override
     protected void init(VaadinRequest request) {
 
-        // Add the two textfields created above to a layout and make 
-        // that the main layout of the UI
         final VerticalLayout layout = new VerticalLayout(name, email, text);
         setContent(layout);
 
@@ -39,18 +37,9 @@ public class MyUI extends UI {
         Button button = new Button("Send email");
         layout.addComponents(button);
 
-        /* TODO 
-         * Create a ClickListener for the button and call the service (Autowired above)
-         * whenever somebody clicks on the button. 
-         * 
-         * ANSWER:
-         * 
-         * button.addClickListener(e -> {
-         *    service.signUp(s);
-         *  });
-         */
-        // Some visual styling for the layout for nicer look 'n' feel. 
-        // Alternatively doable in CSS/Sass
+        // TODO: Call service.signUp(s) when button is clicked 
+
+        // Visual styling for the layout for nicer look 'n' feel. 
         layout.setMargin(true);
         layout.setSpacing(true);
     }

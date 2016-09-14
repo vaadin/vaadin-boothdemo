@@ -1,17 +1,6 @@
 # Vaadin Expo booth example application
 
-This is a starting point for showing how Vaadin works. You'll need a Java 8 installation and a Java IDE like IntelliJ, NetBeans or Eclipse. 
-
-## Before JavaOne
-
-Clone this repository for yourself 
-```
-git clone git@gitlab.vaadin.com:fredu/javaone-pitch.git
-```
-
-Import the Maven project in your IDE: 
-
-If you are using IntelliJ or NetBeans, just open the project from the downloaded project. In Eclipse, use "Import -> Existing Maven Projects". If you are new to Maven, you could look into [the Maven tutorial](https://vaadin.com/blog/-/blogs/the-maven-essentials-for-the-impatient-developer).
+This is a starting point for showing how Vaadin Framework works. You'll need a Java 8 installation and a Java IDE like IntelliJ, NetBeans or Eclipse. This is a Maven project so import it to your IDE. If you're new to maven see [the Maven tutorial](https://vaadin.com/blog/-/blogs/the-maven-essentials-for-the-impatient-developer).
 
 
 ## The Booth Pitch
@@ -21,19 +10,19 @@ git reset --hard
 
 >Hi, have you been using Vaadin before or do you wanna know what it is? 
 
-You only leave room for a positive answer -> good first start
+(Yes)
 
-> Excellent! So what do you do yourself by the way? Are you a developer or an architect or ...?
+> Excellent! So what do you do yourself? Are you a developer or an architect or ...?
 
-Be interested in them, but don't push!
+Be genuinely interested and understand what they do (priority 1)!
 
-> So... Vaadin is a Java UI Framework. It's completely open source and used by 150 000 developers around the world. Let me show you what you can do with it:
+> Vaadin is a Java UI Framework. It's completely open source and used by 150 000 developers around the world. Let me show you what you can do with it:
 
 Open up http://demo.vaadin.com/dashboard/
 
 > Vaadin is mostly used for building business applications that look really good and work across all devices.
 
-Click around in dashboard, show graphs, tables etc
+Click around in dashboard, show graphs, tables etc. Show it on different screensizes by resizing the browser.
 
 > Vaadin consists of hundreds of widgets that have a clear Java API from a table to graphs and menus. The beauty of it is that the user interacts with an HTML5 app and the communication is automated. 
 
@@ -69,10 +58,6 @@ Open up Chrome with the app
 
 > All of this is open source and free to use in any way that you want! 
 
-(Wait for them to ask how we make money, if no question then continue):
-
 > We make our money by building even more awesome tools such as a visual Designer for Vaadin Framework and consulting and support.
 > The fun part however starts when you start designing your UIs. Do you want to see how to simply drag and drop your UI in place even faster?
-
-See the Designer project!
 

@@ -26,6 +26,9 @@ public class MyUI extends UI {
     @Override
     protected void init(VaadinRequest request) {
 
+    	name.setPlaceholder("Your Name");
+    	email.setPlaceholder("your@email.com");
+    	
         final VerticalLayout layout = new VerticalLayout(name, email, text);
         setContent(layout);
 

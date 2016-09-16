@@ -10,8 +10,8 @@ import java.util.Set;
  */
 public class EmailSubscription {
 
-	private String email = "your@email.com";
-	private String name = "Your Name";
+	private String email = "";
+	private String name = "";
 	private String title;
 	private Instant joined = Instant.now();
 	private Set<InterestType> interestTypes = new HashSet<InterestType>(
